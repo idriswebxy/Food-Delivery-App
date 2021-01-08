@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "add": "^2.0.6",
     "apollo-boost": "^0.4.7",
+    "express": "^4.17.1",
     "graphql": "^15.0.0",
     "next": "9.4.0",
     "next-apollo": "^3.1.10",
@@ -23,11 +24,13 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "dev": "next",
-    "build": "react-scripts build",
-    "start": "react-scripts start",
+    "dev": "nodemon server.js",
+    "build-react": "react-scripts build",
+    "start-react": "react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
     "extends": [

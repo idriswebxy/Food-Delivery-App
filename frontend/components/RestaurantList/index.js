@@ -29,8 +29,6 @@ const QUERY = gql`
 function RestaurantList(props) {
   const { loading, error, data } = useQuery(QUERY);
 
-  console.log(data)
-
   if (error) return "Error loading restaurants";
   //if restaurants are returned from the GraphQL query, run the filter query
   //and set equal to variable restaurantSearch

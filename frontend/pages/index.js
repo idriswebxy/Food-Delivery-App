@@ -22,7 +22,7 @@ function Home() {
           </div>
           <RestaurantList search={query} />
         </Col>
-      </Row>
+      </Row>  
       <style jsx>
         {`
           .search {
