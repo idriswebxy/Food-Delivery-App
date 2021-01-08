@@ -3,10 +3,13 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import withData from "../lib/apollo";
 
-export default class MyApp extends App {
+
+class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
+
     return (
       <>
         <Head>
@@ -17,10 +20,12 @@ export default class MyApp extends App {
             crossOrigin="anonymous"
           />
         </Head>
-        <Layout>
+        <Layout> 
           <Component {...pageProps} />
         </Layout>
       </>
     );
   }
 }
+
+export default withData(MyApp);
