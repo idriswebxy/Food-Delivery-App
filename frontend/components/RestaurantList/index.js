@@ -11,6 +11,7 @@ import {
   CardTitle,
   Row,
   Col,
+  Spinner
 } from "reactstrap";
 
 const QUERY = gql`
@@ -32,7 +33,7 @@ function RestaurantList(props) {
   if (error) return "Error loading restaurants";
   //if restaurants are returned from the GraphQL query, run the filter query
   //and set equal to variable restaurantSearch
-  if (loading) return <h1>Fetching</h1>;
+  if (loading) return <Spinner color="primary" />;
   if (data.restaurants && data.restaurants.length) {
     //searchQuery
     const searchQuery = data.restaurants.filter((query) =>

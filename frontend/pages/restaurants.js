@@ -11,6 +11,7 @@ import {
   CardTitle,
   Col,
   Row,
+  Spinner,
 } from "reactstrap";
 
 const GET_RESTAURANT_DISHES = gql`
@@ -31,7 +32,6 @@ const GET_RESTAURANT_DISHES = gql`
   }
 `;
 
-
 function Restaurants(props) {
   const router = useRouter();
   const { loading, error, data } = useQuery(GET_RESTAURANT_DISHES, {
@@ -39,7 +39,7 @@ function Restaurants(props) {
   });
 
   if (error) return "Error Loading Dishes";
-  if (loading) return <h1>Loading ...</h1>;
+  if (loading) return <Spinner color="primary" />;
   if (data.restaurant) {
     const { restaurant } = data;
     return (
@@ -57,9 +57,10 @@ function Restaurants(props) {
                 <CardBody>
                   <CardTitle>{res.name}</CardTitle>
                   <CardText>{res.description}</CardText>
+                  <CardText>${res.price}</CardText>
                 </CardBody>
                 <div className="card-footer">
-                  <Button   outline color="primary">
+                  <Button outline color="primary">
                     + Add To Cart
                   </Button>
 

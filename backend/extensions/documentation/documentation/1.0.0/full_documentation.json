@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/08/2021 6:35:31 PM"
+    "x-generation-date": "01/08/2021 8:10:40 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3255,7 +3255,7 @@
           "price": {
             "type": "number"
           },
-          "dish": {
+          "restaurant": {
             "required": [
               "id"
             ],
@@ -3275,12 +3275,6 @@
                   "type": "string"
                 }
               },
-              "price": {
-                "type": "number"
-              },
-              "dish": {
-                "type": "string"
-              },
               "dishes": {
                 "type": "array",
                 "items": {
@@ -3295,52 +3289,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "dishes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "price": {
-                  "type": "number"
-                },
-                "dish": {
-                  "type": "string"
-                },
-                "dishes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -3361,14 +3309,8 @@
           "price": {
             "type": "number"
           },
-          "dish": {
+          "restaurant": {
             "type": "string"
-          },
-          "dishes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -3466,6 +3408,46 @@
               }
             }
           },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "price": {
+                  "type": "number"
+                },
+                "restaurant": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3479,6 +3461,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

@@ -26,6 +26,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "dishes": {
+      "via": "restaurant",
+      "collection": "dish"
     }
   }
 }

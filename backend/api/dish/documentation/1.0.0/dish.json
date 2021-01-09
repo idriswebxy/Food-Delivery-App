@@ -601,7 +601,7 @@
           "price": {
             "type": "number"
           },
-          "dish": {
+          "restaurant": {
             "required": [
               "id"
             ],
@@ -621,12 +621,6 @@
                   "type": "string"
                 }
               },
-              "price": {
-                "type": "number"
-              },
-              "dish": {
-                "type": "string"
-              },
               "dishes": {
                 "type": "array",
                 "items": {
@@ -641,52 +635,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "dishes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "price": {
-                  "type": "number"
-                },
-                "dish": {
-                  "type": "string"
-                },
-                "dishes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -707,14 +655,8 @@
           "price": {
             "type": "number"
           },
-          "dish": {
+          "restaurant": {
             "type": "string"
-          },
-          "dishes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
